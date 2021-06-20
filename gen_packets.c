@@ -223,7 +223,7 @@ int main(int argc, char **argv)
           switch (c) {
 
             case 0:				/* possible future use */
-
+			  
               text_color_set(DW_COLOR_INFO); 
               dw_printf("option %s", long_options[option_index].name);
               if (optarg) {
@@ -405,6 +405,7 @@ int main(int argc, char **argv)
 
             case 'o':				/* -o for Output file */
 
+	      text_color_init(0);  // no colors
               strlcpy (output_file, optarg, sizeof(output_file));
               text_color_set(DW_COLOR_INFO); 
               dw_printf ("Output file set to %s\n", output_file);

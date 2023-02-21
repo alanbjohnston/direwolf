@@ -975,3 +975,17 @@ static int audio_file_close (void)
 void dcd_change (int chan, int subchan, int slice, int state)
 {
 }
+
+void setup() {
+	
+	Serial.begin(115200);
+	
+	Serial.println("Starting");
+	
+}
+
+void loop() {
+	
+  delay(1000);	
+	
+}

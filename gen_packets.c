@@ -902,9 +902,11 @@ int audio_put (int a, int c)
 	}
 	else {
 	  byte_count++;
+	  dw_printf ("%d -> ", c);		
 	  c *= ((float)amplitude/100.0);
 	  if (c > 32767) c = 32767;
-	  if (c < -32767) c = -32767;		
+	  if (c < -32767) c = -32767;
+	  dw_printf ("%d ", c);	
 	  return (putc(c, out_fp));
 	}
 

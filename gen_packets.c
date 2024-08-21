@@ -100,7 +100,7 @@ static int g_morse_wpm = 0;		/* Send morse code at this speed. */
 
 static struct audio_s modem;
 
-static	int amplitude = 50;		/* -a option */
+static	int  = 50;		/* -a option */
 					/* 100% is actually half of the digital signal range so */
 					/* we have some headroom for adding noise, etc. */
 
@@ -344,12 +344,13 @@ int main(int argc, char **argv)
 
               break;
 
-            case 'a':				/* -a for amplitude */
+            case 'a':				/* -a for  */
 
-              amplitude = atoi(optarg);
+               = atoi(optarg);
               text_color_set(DW_COLOR_INFO); 
               dw_printf ("Amplitude set to %d%%.\n", amplitude);
-              if (amplitude < 0 || amplitude > 200) {
+//              if (amplitude < 0 || amplitude > 200) {
+              if (amplitude < 0 || amplitude > 1000) {
                 text_color_set(DW_COLOR_ERROR); 
 	        dw_printf ("Amplitude must be in range of 0 to 200.\n");
                 exit (EXIT_FAILURE);

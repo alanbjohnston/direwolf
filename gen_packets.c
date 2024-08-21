@@ -100,7 +100,7 @@ static int g_morse_wpm = 0;		/* Send morse code at this speed. */
 
 static struct audio_s modem;
 
-static	int  = 50;		/* -a option */
+static	int amplitude = 50;		/* -a option for amplitude */
 					/* 100% is actually half of the digital signal range so */
 					/* we have some headroom for adding noise, etc. */
 

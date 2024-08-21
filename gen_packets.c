@@ -344,9 +344,9 @@ int main(int argc, char **argv)
 
               break;
 
-            case 'a':				/* -a for  */
+            case 'a':				/* -a for amplitude */
 
-               = atoi(optarg);
+              amplitude  = atoi(optarg);
               text_color_set(DW_COLOR_INFO); 
               dw_printf ("Amplitude set to %d%%.\n", amplitude);
 //              if (amplitude < 0 || amplitude > 200) {

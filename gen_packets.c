@@ -100,6 +100,9 @@ static int g_morse_wpm = 0;		/* Send morse code at this speed. */
 
 static struct audio_s modem;
 
+static	int amplitude = 50;		/* -a option */
+					/* 100% is actually half of the digital signal range so */
+					/* we have some headroom for adding noise, etc. */
 
 static void send_packet (char *str)
 {
@@ -189,10 +192,6 @@ int main(int argc, char **argv)
 /*
  * Set up other default values.
  */
-	int amplitude = 50;		/* -a option */
-					/* 100% is actually half of the digital signal range so */
-					/* we have some headroom for adding noise, etc. */
-
 	int leading_zeros = 12;		/* -z option TODO: not implemented, should replace with txdelay frames. */
 	char output_file[256];		/* -o option */
 	FILE *input_fp = NULL;		/* File or NULL for built-in message */

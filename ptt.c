@@ -1122,10 +1122,10 @@ void ptt_set (int ot, int chan, int ptt_signal)
  * Inverted output? 
  */
 
-	if (save_audio_config_p->achan[chan].octrl[ot].ptt_invert) {
+	if (!save_audio_config_p->achan[chan].octrl[ot].ptt_invert) {
 	  ptt = ! ptt;
 	}
-	if (save_audio_config_p->achan[chan].octrl[ot].ptt_invert2) {
+	if (!save_audio_config_p->achan[chan].octrl[ot].ptt_invert2) {
 	  ptt2 = ! ptt2;
 	}
 

@@ -678,7 +678,7 @@ void export_gpio(int ch, int ot, int invert, int direction)
 
 	char gpio_val[8];
 	if (direction) {
-	  if (invert) {
+	  if (!invert) {
 	    strlcpy (gpio_val, "high", sizeof(gpio_val));
 	  }
 	  else {

@@ -724,8 +724,8 @@ endif
 
 .PHONY: install-rpi
 install-rpi : 
-	ln -f -s $(DESTDIR)/share/applications/direwolf.desktop ~/Desktop/direwolf.desktop
-
+#	ln -f -s $(DESTDIR)/share/applications/direwolf.desktop ~/Desktop/direwolf.desktop
+	:
 
 
 # ----------------------------------  Automated Smoke Test  --------------------------------
